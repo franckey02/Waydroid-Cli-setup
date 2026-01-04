@@ -26,7 +26,7 @@ A simple, clean CLI installer for Waydroid that supports multiple Linux distribu
 ```bash
 # Clone the repository
 git clone https://github.com/franckey02/Waydroid-Cli-setup.git
-cd waydroid-installer
+cd  Waydroid-Cli-setup
 
 # Install Waydroid (requires sudo)
 cd sh
