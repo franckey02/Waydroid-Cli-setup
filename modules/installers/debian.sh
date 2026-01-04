@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Debian/Ubuntu installer for Waydroid
 
 install_debian() {
