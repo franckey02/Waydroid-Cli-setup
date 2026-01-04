@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Void Linux installer for Waydroid
 
 install_void() {
