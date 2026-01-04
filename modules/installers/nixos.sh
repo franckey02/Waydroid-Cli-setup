@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # NixOS instructive guide for Waydroid
 
 install_nixos() {
