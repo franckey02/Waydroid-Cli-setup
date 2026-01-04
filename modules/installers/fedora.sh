@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Fedora installer for Waydroid
 
 install_fedora() {
