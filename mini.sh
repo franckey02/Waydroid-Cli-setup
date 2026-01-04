@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Waydroid Multi-Distro Installer CLI
 # A unified tool to install and configure Waydroid across different distributions.
