@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Arch Linux installer for Waydroid
 
 install_arch() {
