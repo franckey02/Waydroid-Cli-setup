@@ -29,7 +29,8 @@ git clone https://github.com/javierc/waydroid-installer.git
 cd waydroid-installer
 
 # Install Waydroid (requires sudo)
-sudo ./waydroid-installer.sh
+cd sh
+sudo ./swaydroid-installer.sh
 
 # Install without prompts
 sudo ./waydroid-installer.sh --unattended
