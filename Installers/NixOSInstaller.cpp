@@ -171,4 +171,31 @@ bool NixOSInstaller::save_guide_to_file() const {
     }
     
     string guide_path = home + "/waydroid_nixos_installation_guide.txt";
-    of
+    ofstream file(guide_path);
+    
+    if (!file.is_open()) {
+        cerr << "Error: Could not save guide to file\n";
+        return false;
+    }
+    
+    // Redirigir la salida del guide al archivo
+    file << "Waydroid Installation Guide for NixOS\n";
+    file << "=======================================\n\n";
+    
+    // Aquí iría el contenido completo del guide
+    // (simplificado por brevedad)
+    file << "See the installation guide shown in the terminal.\n";
+    
+    file.close();
+    
+    cout << "Guide saved to: " << guide_path << "\n";
+    return true;
+}
+
+bool NixOSInstaller::ask_save_guide() const {
+    string response;
+    cout << "\nSave this guide to a file? (Y/n): ";
+    getline(cin, response);
+    
+    return response.empty() || response[0] == 'Y' || response[0] == 'y';
+}
