@@ -168,7 +168,7 @@ waydroid show-full-ui
 
 
 ## Author
-Javierc
+JavierC @franckey02
 
 ## Acknowledgments
 
