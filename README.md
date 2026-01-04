@@ -30,7 +30,7 @@ cd  Waydroid-Cli-setup
 
 # Install Waydroid (requires sudo)
 cd sh
-sudo ./swaydroid-installer.sh
+sudo ./waydroid-installer.sh
 
 # Install without prompts
 sudo ./waydroid-installer.sh --unattended
