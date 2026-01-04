@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # openSUSE installer for Waydroid
 
 install_opensuse() {
