@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Waydroid Installer - Multi-distro CLI installer
 # Supported: Arch, Void, Debian/Ubuntu, Fedora, openSUSE, NixOS
 
