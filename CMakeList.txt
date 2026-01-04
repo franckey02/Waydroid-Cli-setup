@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.10)
+project(waydroid-installer VERSION 1.0.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Ejecutable principal
+add_executable(waydroid-installer
+    src/main.cpp
+    src/SystemDetector.cpp
+    src/Installer.cpp
+    src/Uninstaller.cpp
+    installers/ArchInstaller.cpp
+    installers/DebianInstaller.cpp
+    installers/FedoraInstaller.cpp
+    installers/OpenSUSEInstaller.cpp
+    installers/VoidInstaller.cpp
+    installers/NixOSInstaller.cpp
+)
+
+# Incluir directorios
+target_include_directories(waydroid-installer PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/installers
+)
+
+# Instalación
+install(TARGETS waydroid-installer
+    RUNTIME DESTINATION bin
+)
+
+# Tests (opcional)
+if(BUILD_TESTING)
+    enable_testing()
+    
+    add_executable(test_system
+        tests/test_system.cpp
+        src/SystemDetector.cpp
+    )
+    target_include_directories(test_system PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+    
+    add_test(NAME test_system COMMAND test_system)
+endif()
