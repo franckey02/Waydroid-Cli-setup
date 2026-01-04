@@ -174,7 +174,7 @@ JavierC
 ## Acknowledgments
 
 - Waydroid team for the amazing Android-on-Linux solution
-- All Linux distribution maintainers
+- Multiple Linux distribution maintainers
 - The open source community
 
 ---
