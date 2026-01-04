@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Waydroid Uninstaller - Remove Waydroid completely
 
 set -e  # Exit on error
