@@ -1,0 +1,37 @@
+#!/bin/bash
+# Void Linux installer for Waydroid
+
+install_void() {
+    echo "Installing Waydroid on Void Linux..."
+    
+    # Update system
+    xbps-install -Su -y
+    
+    # Install Waydroid
+    xbps-install -y waydroid
+    
+    # Check README for Void-specific instructions
+    if [ -f "/usr/share/doc/waydroid/README.voidlinux" ]; then
+        echo "Void-specific instructions available in:"
+        echo "/usr/share/doc/waydroid/README.voidlinux"
+    fi
+    
+    # Initialize
+    echo "Initializing Waydroid..."
+    
+    if [ "$UNATTENDED" = true ]; then
+        waydroid init
+    else
+        read -p "Initialize with Google Apps (GAPPS)? (Y/n): " gapps_choice
+        if [[ ! $gapps_choice =~ ^[Nn] ]]; then
+            waydroid init -s GAPPS
+        else
+            waydroid init
+        fi
+    fi
+    
+    # Enable service (Void uses runit)
+    ln -sf /etc/sv/waydroid-container /var/service/
+    
+    echo "Waydroid installation completed on Void Linux"
+}
